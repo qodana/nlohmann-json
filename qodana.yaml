@@ -1,3 +1,8 @@
 version: "1.0"
 profile:
   name: qodana.recommended
+bootstrap: |
+  apt-get update
+  apt-get install meson -y
+  meson setup build .
+  mv build/compile_commands.json ./
